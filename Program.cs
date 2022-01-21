@@ -11,6 +11,12 @@ using System.Collections;
             Queue<char> numbers = new Queue<char>();
             Queue<char> operators = new Queue<char>();
 
-            
+            for (int i = 0; i < expression.Length; i++)
+            {
+                if (Char.IsDigit(expression[i]))
+                    numbers.Enqueue(expression[i]);
+                else
+                    operators.Enqueue(expression[i]);
+            }
         }
     }
