@@ -19,8 +19,8 @@ using System.Collections;
                     operators.Enqueue(expression[i]);
             static void Values(IEnumerable myCollection)
             {
-                foreach (Object obj in myCollection)
-                    Console.Write(obj);
+                foreach (Object element in myCollection)
+                    Console.Write(element);
                 Console.WriteLine();
             }
             Values(operators);
