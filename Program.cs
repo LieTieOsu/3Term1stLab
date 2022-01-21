@@ -17,6 +17,14 @@ using System.Collections;
                     numbers.Enqueue(expression[i]);
                 else
                     operators.Enqueue(expression[i]);
+            static void Values(IEnumerable myCollection)
+            {
+                foreach (Object obj in myCollection)
+                    Console.Write(obj);
+                Console.WriteLine();
+            }
+            Values(operators);
+            Values(numbers);    
             }
         }
     }
