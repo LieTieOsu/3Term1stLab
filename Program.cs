@@ -25,15 +25,17 @@ bool OperatorCheck(String element)
             result += queue.Dequeue();
         }
         
-        string UniteNumbers(Queue queue)
+int Priority(string element)
     {
-        string result = "";
-        while (!queue.IsEmpty())
+        if (element == "+" || element == "-")
         {
-            result += queue.Dequeue();
+            return 0;
         }
-
-        return result;
+        if (element == "*" || element == "/" || element == "x")
+        {
+            return 1;
+        }
+        return 2;
     }
 
 Queue Tokenizer(string expression)
