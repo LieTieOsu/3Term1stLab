@@ -19,3 +19,18 @@ public class Queue
         _pointer++;
     }
     
+    public string Dequeue()
+    {
+        if (_pointer == 0)
+        {
+            return null;
+        }
+
+        var value = array[0];
+        _pointer--;
+        for (var i = 0; i < _pointer; i++)
+        {
+            array[i] = array[i + 1];
+        }
+        return value;
+    }
