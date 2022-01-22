@@ -97,6 +97,7 @@ Queue ShuntingYard(Queue tokenized)
     }
 
     return output;
+}
 
 String Calculate(Queue postfixTokenQueue)
 {
