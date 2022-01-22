@@ -31,7 +31,7 @@ namespace Task
                 return null;
             }
 
-            var value = _array[_pointer];
+            var value = _array[_pointer - 1];
             _pointer--;
             return value;
         }
