@@ -44,7 +44,10 @@ namespace Task
 
             return _array[_pointer - 1];
          }
- 
+        public bool IsEmpty()
+        {
+            return _pointer == 0;
+        }
 
     }
 }
