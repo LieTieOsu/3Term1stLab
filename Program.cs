@@ -15,10 +15,28 @@ Queue Tokenizer(string expression)
 {
     var tokenized = new Queue();
     var num = new Queue();
-  
-  
-  
-  
+      for (int index = 0; index < expression.Length; index++)
+    {
+        if (char.IsDigit(expression[index]) || expression[index] == ',')
+        {
+            num.Enqueue(expression[index].ToString());
+        }
+        else if (expression[index] == ' ')
+        {
+            if (!num.IsEmpty())
+                tokenized.Enqueue(UniteNumber(num));
+        }
+        else
+        {
+            if (!num.IsEmpty())
+                tokenized.Enqueue(UniteNumber(num));
+            tokenized.Enqueue(expression[index].ToString());
+        }
+    }
+
+    if (!num.IsEmpty())
+        tokenized.Enqueue(UniteNumber(num));
+    
    return tokenized;
 }
 
