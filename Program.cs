@@ -65,7 +65,7 @@ Queue ShuntingYard(Queue tokenized)
     }
     while (!operatorStack.IsEmpty())
     {
-        output.Enqueue(operatorStack.Pull());
+        output.Enqueue(operatorStack.Get);
     }
   
   return output;
@@ -74,9 +74,21 @@ Queue ShuntingYard(Queue tokenized)
 String Calculate(Queue postfixTokenQueue)
 {
     var set = new Stack();
-String Calculate(Queue postfixTokenQueue)
-{
-    var set = new Stack();
+    while (!postfixTokenQueue.IsEmpty())
+    {
+        var token = postfixTokenQueue.Dequeue();
+        if (double.TryParse(token, out  _))
+        {
+            set.Push(token);
+        }
+        else
+        {
+            var secondNum = set.Get();
+            var firstNum = set.Get();
+            set.Push(Count(firstNum, secondNum, token));
+        }
+    }
+    var result = set.Get();
   
   
   
