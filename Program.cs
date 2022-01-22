@@ -24,6 +24,17 @@ bool OperatorCheck(String element)
         {
             result += queue.Dequeue();
         }
+        
+        string UniteNumbers(Queue queue)
+    {
+        string result = "";
+        while (!queue.IsEmpty())
+        {
+            result += queue.Dequeue();
+        }
+
+        return result;
+    }
 
 Queue Tokenizer(string expression)
 {
