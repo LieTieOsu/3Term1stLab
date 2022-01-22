@@ -45,7 +45,28 @@ Queue ShuntingYard(Queue tokenized)
 {
     var operatorStack = new Stack();
     var output = new Queue();
-  
+    while (!tokenized.IsEmpty())
+    {
+        var token = tokenized.Dequeue();
+        bool checkIfNumber = double.TryParse(token, NumberStyles.Any, CultureInfo.InvariantCulture, out _);
+        if (checkIfNumber)
+        {
+            output.Enqueue(token);
+        }
+        else if (OperatorCheck(token))
+        {
+            while (!operatorStack.IsEmpty() && Priority(operatorStack.Pop()) > Priority(token))
+            {
+
+            }
+
+            operatorStack.Push(token);
+        }
+    }
+    while (!operatorStack.IsEmpty())
+    {
+        output.Enqueue(operatorStack.Pull());
+    }
   
   return output;
 }
