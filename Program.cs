@@ -51,18 +51,18 @@ Queue Tokenizer(string expression)
         else if (expression[index] == ' ')
         {
             if (!num.IsEmpty())
-                tokenized.Enqueue(UniteNumber(num));
+                tokenized.Enqueue(UniteNumbers(num));
         }
         else
         {
             if (!num.IsEmpty())
-                tokenized.Enqueue(UniteNumber(num));
+                tokenized.Enqueue(UniteNumbers(num));
             tokenized.Enqueue(expression[index].ToString());
         }
     }
 
     if (!num.IsEmpty())
-        tokenized.Enqueue(UniteNumber(num));
+        tokenized.Enqueue(UniteNumbers(num));
     
    return tokenized;
 }
