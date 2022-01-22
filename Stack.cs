@@ -1,11 +1,8 @@
-namespace Samples
+namespace Task
 {
     using System;
 
-    /// <summary>
-    /// This is a simple implementation of a limited capacity stack.
-    /// You can improve it by adding resizing or mote additional methods
-    /// </summary>
+
     public class Stack
     {
         private const int Capacity = 50;
@@ -18,7 +15,7 @@ namespace Samples
         {
             if (_pointer == _array.Length)
             {
-                // this code is raising an exception about reaching stack limit
+
                 throw new Exception("Stack overflowed");
             }
 
@@ -30,7 +27,7 @@ namespace Samples
         {
             if (_pointer == 0)
             {
-                //you can also raise an exception here, but we're simple returning nothing
+
                 return null;
             }
 
@@ -38,5 +35,16 @@ namespace Samples
             _pointer--;
             return value;
         }
+         public string Pop()
+         {
+            if (_pointer == 0)
+            {
+                return null;
+            }
+
+            return _array[_pointer - 1];
+         }
+ 
+
     }
 }
