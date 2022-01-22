@@ -23,7 +23,7 @@ namespace Task
             _pointer++;
         }
 
-        public string Pull()
+        public string Get()
         {
             if (_pointer == 0)
             {
