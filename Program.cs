@@ -24,7 +24,7 @@ bool OperatorCheck(String element)
         {
             result += queue.Dequeue();
         }
-        return = result;
+        return result;
     } 
 int Priority(string element)
     {
