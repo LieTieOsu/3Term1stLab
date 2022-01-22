@@ -45,7 +45,7 @@ String Calculate(Queue postfixTokenQueue)
   return result;
 }
   
-  tring Count(string firstNum, string secondNum, string element)
+  string Count(string firstNum, string secondNum, string element)
 { 
     double result;
     switch (element)
