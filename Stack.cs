@@ -48,6 +48,9 @@ namespace Task
         {
             return _pointer == 0;
         }
-
+        public string ToString()
+        {
+            return string.Join(' ', _array);
+        }
     }
 }
