@@ -11,6 +11,20 @@ var result = Calculate(postfixTokens);
 Console.Write("<"); 
 Console.WriteLine(result);
 
+bool OperatorCheck(String element)
+    {
+        if (element == "+" || element == "-" || element == "/" || element == "*" || element == "x")
+            return true;
+        return false;
+    }
+    string UniteNumbers(Queue queue)
+    {
+        string result = "";
+        while (!queue.IsEmpty())
+        {
+            result += queue.Dequeue();
+        }
+
 Queue Tokenizer(string expression)
 {
     var tokenized = new Queue();
@@ -89,9 +103,6 @@ String Calculate(Queue postfixTokenQueue)
         }
     }
     var result = set.Get();
-  
-  
-  
   
   return result;
 }
