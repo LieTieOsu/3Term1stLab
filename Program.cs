@@ -93,11 +93,10 @@ Queue ShuntingYard(Queue tokenized)
     }
     while (!operatorStack.IsEmpty())
     {
-        output.Enqueue(operatorStack.Get);
+        output.Enqueue(operatorStack.Get());
     }
-  
-  return output;
-}
+
+    return output;
 
 String Calculate(Queue postfixTokenQueue)
 {
