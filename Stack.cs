@@ -61,7 +61,7 @@ namespace Task
 
             var value = _array[_pointer - 1];
             _pointer--;
-            return value;*/
-        }
+            return value;
+        }*/
     }
 }
