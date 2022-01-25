@@ -52,7 +52,7 @@ namespace Task
         {
             return string.Join(' ', _array);
         }
-        public string Get()
+        /*public string Get()
         {
             if (_pointer == 0)
             {
@@ -61,7 +61,7 @@ namespace Task
 
             var value = _array[_pointer - 1];
             _pointer--;
-            return value;
+            return value;*/
         }
     }
 }
